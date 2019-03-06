@@ -1,5 +1,5 @@
 HAI 1.2
-
+    BTW Declaration des variables
     I HAS A longueur ITZ 7
     I HAS A largeur ITZ 7
     I HAS A ligne_pleine ITZ ""
@@ -22,13 +22,25 @@ HAI 1.2
     I HAS A huit ITZ " "
     I HAS A neuf ITZ " "
 
+    OBTW
+
+    Fonction qui get et set les 'x' et les 'o'
+
+    @param NUMBR index
+    @param TROOF IS_SET
+    @param NUMBR ROUND
+
+    TLDR
     HOW DUZ I GET_SET_X_OR_O_FROM_INDEX YR INDEX AN YR IS_SET AN YR ROUND
+        BTW Converti les param
         INDEX IS NOW A NUMBR
         IS_SET IS NOW A TROOF
         ROUND IS NOW A NUMBR
 
+        BTW Test si chaque vase est set
         NOT IS_SET, O RLY?
             YA RLY
+                BTW switch case qui initialise les cases
                 INDEX, WTF?
                     OMG 1
                         FOUND YR un
@@ -62,13 +74,25 @@ HAI 1.2
                         GTFO
                 OIC
             NO WAI
+                OBTW
+
+                    Check si on est au tour du joeur 1 ou 2
+
+                    BOTH SAEM 
+                        Si les valeurs sont égales
+
+                    MOD OF <var> AN <expression1> AN <expression2>
+                        <var> -> valeur qui va être modulo
+                        <expression1> -> valeur de la division
+                        <expression2> -> résultat du modulo
+                TLDR
                 BOTH SAEM MOD OF ROUND AN 2 AN 1, O RLY?
                     YA RLY
                         char R "x"
                     NO WAI
                         char R "o"
                 OIC
-
+                BTW switch case pour mettre le 'x' ou le 'o' dans la case
                 INDEX, WTF?
                     OMG 1
                         un R char
@@ -101,10 +125,20 @@ HAI 1.2
                         GTFO
                 OIC
         OIC
-    IF U SAY SO
+    IF U SAY SO BTW fin de la fonction
 
+    OBTW
+
+    Fonction qui fait les lignes du jeux
+
+    @param NUMBR FUD
+    @return string ligne_jeu
+
+    TLDR
     HOW DUZ I SHOW_GAME_LINE YR FUD
+        BTW Converti FUD en NUMBR
         FUD IS NOW A NUMBR
+
         I HAS A i ITZ FUD
         I HAS A largeur ITZ SUM OF i AN 3
         I HAS A ligne_jeu ITZ ""
@@ -118,8 +152,9 @@ HAI 1.2
         ligne_jeu R SMOOSH ligne_jeu AN " | "
 
         FOUND YR ligne_jeu
-    IF U SAY SO
+    IF U SAY SO BTW fin de la fonction
 
+    BTW fonction qui affiche le tableau de jeux
     HOW DUZ I SHOW_BOARD
         compteur R 0
         I HAS A i ITZ 0
@@ -146,8 +181,9 @@ HAI 1.2
         IM OUTTA YR LOOP
 
         ligne_pleine R ""
-    IF U SAY SO
+    IF U SAY SO BTW fin de la fonction
 
+    BTW Fonction qui test les possibilité de victoire
     HOW DUZ I TEST_WIN
         BTW Ligne horiztontale 1-2-3
         BOTH OF DIFFRINT un AN " " AN BOTH OF DIFFRINT deux AN " " AN DIFFRINT trois AN " ", O RLY?
